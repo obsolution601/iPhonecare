@@ -1,0 +1,794 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* the color for the menu bar  */
+
+.menu_bar {
+    margin-top: -7.5px;
+    background: linear-gradient(rgb(5, 0, 24), rgb(9, 10, 94));
+    border-radius: 10px;
+    list-style: none;
+    z-index: 2;
+    padding: 10px 10px 10px 10px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu_bar ul li a {
+    list-style: none;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+
+/* i am using z_index to make the client drop list to display infont of the picture */
+
+.z_index {
+    position: relative;
+    color: green;
+    z-index: 1;
+}
+
+.menu_bar ul {
+    text-align: center;
+    display: inline-flex;
+    list-style: none;
+    font-weight: 100;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.li_color_white {
+    color: white;
+}
+
+.menu_bar ul li {
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.active,
+.menu_bar ul li:hover {
+    background-color: rgb(12, 1, 32);
+    border-radius: 10px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    color: white;
+    /* this z index is to remove stack flow */
+    z-index: 2;
+}
+
+.sub_menu {
+    display: none;
+}
+
+.menu_bar ul li:hover .sub_menu {
+    background: linear-gradient(rgb(10, 1, 90), rgb(4, 1, 32));
+    border-radius: 10px;
+    display: block;
+    position: absolute;
+    margin-left: -15px;
+}
+
+
+/* change the a tag color to white and make it cange from blue to white or red */
+
+a {
+    color: white;
+}
+
+.menu_bar ul li:hover .sub_menu ul {
+    display: inline;
+    margin: 15px;
+}
+
+.menu_bar ul li:hover .sub_menu ul li {
+    width: 150px;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+
+/* this is the css for the sub menu under the main shop hoveer  ;; class selector main_shop_sub_menu */
+
+.main_shop_sub_menu {
+    display: none;
+}
+
+.main_shop_sub_menu ul li:hover .menu_bar ul li:hover .sub_menu ul li {
+    display: inline;
+    margin: 15px;
+    background-color: rgb(121, 82, 25);
+    border-radius: 10px;
+    display: block;
+    position: absolute;
+    margin-left: -15px;
+}
+
+
+/* image for  side photo ..  */
+
+.photo_1 {
+    display: flex;
+    padding: 5px;
+    width: 30%;
+    height: 70%;
+    position: relative;
+}
+
+
+/* images of iphones on the screen and the changes done to border and padding and margin  */
+
+img {
+    margin-top: 5px;
+    padding: 3px;
+    justify-content: space-around;
+    flex: 1;
+}
+
+
+/* hover the image */
+
+.img:hover {
+    display: inline-block;
+    margin-right: 2%;
+    margin-top: 1%;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    border: 2px groove rgb(32, 8, 8);
+}
+
+
+/* the z inex to remove the stack flow of an image */
+
+.z_index {
+    z-index: -1;
+}
+
+
+/* the a tag color for prices is red */
+
+.a_color {
+    color: red;
+}
+
+
+/* the css change for the form  */
+
+.form_sign {
+    position: relative;
+    float: right;
+    margin-right: -2rem;
+    padding-right: 5rem;
+    margin-top: -2rem;
+}
+
+
+/* fieldset changes // color and font */
+
+.fieldset {
+    background-color: rgba(4, 3, 65, 0.774);
+    padding: 3rem 4rem;
+    margin: 4rem 5rem;
+    border-radius: 2rem;
+    border-style: groove;
+    border-left: rgb(75, 1, 1);
+    background: linear-gradient(rgb(1, 5, 59), rgb(10, 13, 15));
+}
+
+input {
+    size: 5rem;
+    border-radius: 2rem;
+    padding: 0.3rem 0.8rem;
+    border-style: double;
+    border-color: red;
+    border-left: none;
+    border-bottom: none;
+    color: black;
+}
+
+input:hover {
+    border-style: groove;
+    border-radius: 2rem;
+    padding: 0.3rem 0.8rem;
+    background-color: rgb(251, 247, 251);
+    border-bottom: rgb(18, 0, 31);
+    border-left: rgb(56, 1, 1);
+}
+
+.reset {
+    color: white;
+    background-color: rgb(122, 35, 35);
+    margin-top: 12px;
+}
+
+.log {
+    color: white;
+    background-color: rgb(36, 102, 36);
+    margin-top: 12px;
+}
+
+.log:hover {
+    background-color: rgb(3, 92, 3);
+    border-radius: 13px;
+    border-style: groove;
+    border-left: rgb(228, 2, 2);
+    margin-top: 12px;
+}
+
+.reset:hover {
+    background-color: rgb(231, 8, 8);
+    border-radius: 13px;
+    border-style: groove;
+    border-left: rgb(36, 202, 3);
+    margin-top: 12px;
+}
+
+
+/* side for available products in the martket */
+
+.side {
+    width: 15rem;
+    height: 42rem;
+    margin-top: -0.1rem;
+    margin-right: 10px;
+    background: linear-gradient(rgb(16, 0, 87), rgb(47, 45, 167));
+    float: right;
+}
+
+.side>h3 {
+    font-size: 30px;
+    display: flex;
+    text-align: center;
+    background-color: rgb(59, 39, 151);
+}
+
+
+/* the hover for the side  */
+
+.side:hover {
+    background: linear-gradient(rgb(20, 6, 56), rgba(15, 0, 80, 0.658));
+}
+
+
+/* the color chage for p tag  */
+
+p {
+    color: white;
+    background-color: rgb(32, 34, 65);
+    text-align: center;
+}
+
+
+/* the products on the side bar */
+
+h5 {
+    font-weight: 200px;
+    font-size: 20px;
+    margin: 11px;
+    background-color: rgba(2, 1, 34, 0.404);
+    color: white;
+    text-align: center;
+}
+
+h5:hover {
+    background-color: rgb(1, 2, 20);
+}
+
+
+/*  the icons for the nav bar // changing the padding to move bit from the a tag in the nav bar */
+
+i {
+    margin-right: 5px;
+    padding: 3px;
+    display: inline-flex;
+}
+
+
+/* discount for the h4 tag //position text align , background , animation ,font */
+
+h4 {
+    color: black;
+    text-align: center;
+    background-color: rgb(5, 7, 133);
+    text-transform: capitalize;
+    font-size: 27px;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: h4 10s 0.3s infinite;
+    margin-right: 100px;
+    margin-left: 100px;
+    border-radius: 17px;
+}
+
+@keyframes h4 {
+    0% {
+        background: linear-gradient(darkred, rgb(73, 63, 63));
+        background-position: center;
+        color: white;
+        font-display: flex;
+        margin-left: 40px;
+        margin-right: 12px;
+        border-radius: 17px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+}
+
+
+/* icon for arrow-down and div button // text-align background  */
+
+.button {
+    text-align: center;
+    margin-top: -15px;
+    font-stretch: expanded;
+}
+
+
+/* chat client div  */
+
+.chat-client {
+    width: 5px;
+    height: 5px;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+.chat-client>ul li {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* hover for the chat here */
+
+.activechat,
+.chat-client ul li:hover {
+    /* background-color: rgb(75, 4, 75); */
+    border-radius: 10px;
+}
+
+
+/* sub-menu-2 for the chat room */
+
+.sub-menu-2 {
+    display: none;
+    list-style: none;
+}
+
+.chat-client ul li:hover .sub-menu-2 {
+    display: inline;
+    position: absolute;
+    margin-left: -10px;
+}
+
+.chat-client ul li:hover .sub-menu-2 ul {
+    display: block;
+    margin: 10px;
+}
+
+.chat-client ul li:hover .sub-menu-2 li {
+    width: 120px;
+    padding: 15px 15px;
+}
+
+
+/* the comment box to change size to big  with the id=comment*/
+
+#comment {
+    width: 20px;
+    height: 20px;
+    color: darkred;
+}
+
+
+/* fieldset-two for the chat room  */
+
+.fieldset-two>input {
+    color: rgb(8, 8, 8);
+    background-color: rgb(248, 218, 233);
+    border-radius: 10px;
+    border-style: groove;
+    border-top: black;
+    border-left: black;
+    border-right: black;
+    margin: 10px;
+}
+
+
+/* filedset-two // change for color and border */
+
+.fieldset-two {
+    background: linear-gradient(rgb(224, 106, 224), rgb(29, 26, 26));
+    border-radius: 15px;
+    box-shadow: red;
+}
+
+
+/* the submit button for the chat room ..// holds id =submits */
+
+#submits {
+    background-color: rgb(25, 2, 46);
+    color: white;
+    font-weight: 400;
+    border-bottom: rgb(19, 6, 32);
+}
+
+#submits:hover {
+    background-color: rgb(29, 2, 54);
+    color: white;
+    font-weight: 600;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+
+/* the h2 tag for fieldset-two  */
+
+h2 {
+    color: rgb(253, 246, 246);
+    background-color: rgb(92, 5, 92);
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+/* the textarea  */
+
+textarea {
+    background-color: rgb(245, 220, 233);
+    border-radius: 5px;
+}
+
+
+/* the icon for search // move into the search-bar */
+
+#icon-search {
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+
+/* imei-form */
+
+.imei-form {
+    width: 50px;
+    display: inline-flex;
+    /* background-color: rgba(49, 2, 51, 0.473); */
+    margin-left: 8%;
+}
+
+
+/* check imei for form */
+
+.check-imei {
+    background: linear-gradient(rgb(65, 25, 65), rgb(35, 99, 35));
+    margin-left: 6rem;
+    padding: 10px;
+    margin-top: -28rem;
+    margin-bottom: 12rem;
+    border-radius: 4px;
+}
+
+
+/* the check label for the check imei // with class =check-label */
+
+.check-label {
+    text-align: center;
+    font-weight: 700;
+    margin-left: 30%;
+    color: whitesmoke;
+    word-spacing: 5px;
+}
+
+
+/* the submit button */
+
+.check-submit {
+    background-color: rgba(11, 92, 0, 0.582);
+    color: white;
+    margin-left: 13rem;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-top: black;
+    border-right: green;
+    border-style: groove;
+    border-left: green;
+    border-bottom: green;
+}
+
+
+/* check submit hover */
+
+.check-submit:hover {
+    background-color: rgb(3, 95, 3);
+    color: white;
+    margin-left: 12.5rem;
+    padding: 10px;
+    padding-left: 45px;
+    padding-right: 45px;
+    font-weight: 600;
+}
+
+.check-input {
+    margin-left: 2rem;
+    margin-right: 1.5rem;
+    padding: 10px;
+    width: 550px;
+    /* background-color: rgb(251, 239, 255); */
+    background: linear-gradient(rgb(90, 50, 90), rgb(100, 119, 100));
+    border-top: rgb(12, 11, 11);
+    border-style: groove;
+    border-right: black;
+}
+
+
+/* hover for check input */
+
+.check-input:hover {
+    margin-left: 2rem;
+    padding: 10px;
+    background-color: rgb(243, 230, 243);
+    border-top: rgb(253, 251, 251);
+    border-style: groove;
+    border-right: rgb(245, 242, 242);
+    box-shadow: yellow;
+    box-shadow: red;
+}
+
+
+/* the h6 tag in the select  */
+
+h6 {
+    color: white;
+    background-color: rgba(11, 54, 11, 0.479);
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+h6:hover {
+    color: white;
+    background-color: rgba(3, 58, 3, 0.89);
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+select {
+    margin-left: 11rem;
+    width: 200px;
+    height: 30px;
+    background-color: rgba(248, 242, 242, 0.973);
+    border-radius: 10px;
+}
+
+
+/* the p tag with the class= example  */
+
+.example {
+    background: linear-gradient(rgb(65, 25, 65), rgb(35, 160, 35));
+    color: black;
+    font-size: 5px;
+    font-weight: 100px;
+    display: block;
+}
+
+.today-market {
+    margin-top: -15%;
+    margin-left: 24%;
+}
+
+
+/* the footer for the html  */
+
+.footer {
+    margin-top: 8rem;
+    border-end-start-radius: 20px;
+}
+
+
+/* the paragraph for the footer */
+
+.paragraph {
+    color: white;
+    /* background-color: rgb(159, 73, 240); */
+    background: linear-gradient(rgb(0, 0, 0), rgb(32, 23, 32));
+    text-align: center;
+    font-size: 15px;
+}
+
+.a-tag {
+    color: yellow;
+    font-size: 15px;
+}
+
+
+/* the footer with the nav // class = footer-nav */
+
+.footer-nav {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 10px;
+    margin-top: 7px;
+    text-decoration: none;
+}
+
+
+/* the social media for the nav bar // with the class =social-media */
+
+.social-media {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+
+/* the iphone-se photo */
+
+.iphone-SE {
+    background-color: white;
+}
+
+.SE {
+    margin-left: 32rem;
+    padding: -10% -10% -10% -10%;
+    margin-top: -20rem;
+}
+
+
+/* the iphone hover for the // class=SE */
+
+.SE:hover {
+    background-color: rgb(245, 236, 236);
+    border-radius: 2rem;
+    border: 3px solid rgb(247, 235, 235);
+    width: 500px;
+    height: 500px;
+    animation-name: se;
+    animation-duration: 10s;
+    animation-delay: 0.9s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes se {
+    0% {
+        background: linear-gradient(rgb(230, 214, 214), rgb(73, 63, 63));
+        background-position: center;
+        color: white;
+        font-display: flex;
+        margin-left: 40px;
+        margin-right: 12px;
+        border-radius: 17px;
+    }
+}
+
+.new-se {
+    color: red;
+    margin-left: 10rem;
+}
+
+
+/* the iphone SE text // beside the iphone SE photo */
+
+.iphone-se-text {
+    text-align: start;
+    color: black;
+    font-weight: 500;
+    font-size: 30px;
+    background: none;
+    margin-left: 10rem;
+}
+
+.iphone-se-text-SE {
+    border: 2px solid black;
+    margin-left: 7px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 6px;
+    color: black;
+}
+
+
+/* the info about the SE iphone */
+
+.lot-of-love {
+    color: black;
+    background: none;
+    text-align: start;
+    font-size: 43px;
+    font-weight: 800;
+    word-spacing: 3px;
+    margin-left: 10rem;
+}
+
+.price-1 {
+    font-size: 24px;
+    font-weight: 200;
+    text-align: start;
+    background: none;
+    color: black;
+    margin-left: 10rem;
+}
+
+.price-1:hover {
+    background: none;
+}
+
+.price-2:hover {
+    background: none;
+}
+
+.price-2 {
+    background: none;
+    font-size: 18px;
+    font-weight: 150;
+    text-align: start;
+    color: black;
+    margin-left: 10rem;
+}
+
+
+/*  buy and learn-more //  */
+
+#buy-here {
+    color: white;
+    background-color: blue;
+    border: 2px groove rgb(5, 5, 138);
+    margin-left: 10rem;
+}
+
+.learn-more {
+    color: blue;
+    margin-left: 10rem;
+    text-decoration: none;
+}
+
+
+/* the container-text is what will be pushed to get closer to the first phone */
+
+.container-text ul li {
+    color: rgb(20, 20, 20);
+    list-style: none;
+    margin-left: 5%;
+}
+
+
+/* the second comtainer for the text // to be align to the next to the second phone */
+
+.container-text-2 {
+    text-align: left;
+    margin-left: 25%;
+    margin-top: -15.3%;
+}
+
+.container-text-2 ul li {
+    list-style: none;
+}
+
+
+/* the third // align to the next third phone */
+
+.container-text-3 {
+    text-align: left;
+    margin-left: 49%;
+    margin-top: -14%;
+}
+
+.container-text-3 ul li {
+    list-style: none;
+}
